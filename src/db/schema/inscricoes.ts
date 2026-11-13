@@ -1,8 +1,8 @@
 import { pgTable, uuid, integer, timestamp, uniqueIndex, index } from "drizzle-orm/pg-core";
-import { torneios } from "./torneios";
-import { duplas } from "./duplas";
-import { usuarios } from "./usuarios";
-import { registrationStatusEnum } from "./enums";
+import { torneios } from "./torneios.js";
+import { duplas } from "./duplas.js";
+import { usuarios } from "./usuarios.js";
+import { registrationStatusEnum } from "./enums.js";
 
 export const inscricoes = pgTable("inscricoes", {
   id: uuid("id").defaultRandom().primaryKey(),

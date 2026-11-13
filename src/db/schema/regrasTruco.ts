@@ -1,6 +1,6 @@
 import { pgTable, uuid, varchar, integer, boolean, jsonb, timestamp, uniqueIndex } from "drizzle-orm/pg-core";
-import { usuarios } from "./usuarios";
-import type { TrucoRulesConfig } from "./types";
+import { usuarios } from "./usuarios.js";
+import type { TrucoRulesConfig } from "./types.js";
 
 export const regrasTruco = pgTable("regras_truco", {
   id: uuid("id").defaultRandom().primaryKey(),

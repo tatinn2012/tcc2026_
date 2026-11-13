@@ -1,7 +1,7 @@
 import { sql } from "drizzle-orm";
 import { pgTable, uuid, smallint, integer, boolean, primaryKey, check, uniqueIndex } from "drizzle-orm/pg-core";
-import { regrasTruco } from "./regrasTruco";
-import { cartas } from "./cartas";
+import { regrasTruco } from "./regrasTruco.js";
+import { cartas } from "./cartas.js";
 
 /** A força é específica da versão das regras, não do catálogo global da carta. */
 export const forcaCartas = pgTable("forca_cartas", {

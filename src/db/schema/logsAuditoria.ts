@@ -1,6 +1,6 @@
 import { pgTable, uuid, varchar, jsonb, timestamp, index } from "drizzle-orm/pg-core";
-import { usuarios } from "./usuarios";
-import type { JsonObject } from "./types";
+import { usuarios } from "./usuarios.js";
+import type { JsonObject } from "./types.js";
 
 /** Auditoria administrativa genérica. entityId é polimórfico e não possui FK. */
 export const logsAuditoria = pgTable("logs_auditoria", {

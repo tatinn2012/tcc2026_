@@ -1,8 +1,8 @@
 import { sql } from "drizzle-orm";
 import { pgTable, uuid, varchar, text, integer, timestamp, uniqueIndex, index, check } from "drizzle-orm/pg-core";
-import { usuarios } from "./usuarios";
-import { regrasTruco } from "./regrasTruco";
-import { tournamentFormatEnum, tournamentStatusEnum } from "./enums";
+import { usuarios } from "./usuarios.js";
+import { regrasTruco } from "./regrasTruco.js";
+import { tournamentFormatEnum, tournamentStatusEnum } from "./enums.js";
 
 export const torneios = pgTable("torneios", {
   id: uuid("id").defaultRandom().primaryKey(),

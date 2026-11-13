@@ -1,7 +1,7 @@
 import { pgTable, uuid, timestamp, primaryKey, index } from "drizzle-orm/pg-core";
-import { torneios } from "./torneios";
-import { usuarios } from "./usuarios";
-import { tournamentStaffRoleEnum } from "./enums";
+import { torneios } from "./torneios.js";
+import { usuarios } from "./usuarios.js";
+import { tournamentStaffRoleEnum } from "./enums.js";
 
 export const torneioUsuarios = pgTable("torneio_usuarios", {
   torneioId: uuid("torneio_id").notNull().references(() => torneios.id, { onDelete: "cascade" }),

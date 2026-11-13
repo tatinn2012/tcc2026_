@@ -1,8 +1,8 @@
 import { sql } from "drizzle-orm";
 import { pgTable, uuid, integer, smallint, timestamp, uniqueIndex, index, check } from "drizzle-orm/pg-core";
-import { fases } from "./fases";
-import { inscricoes } from "./inscricoes";
-import { confrontationStatusEnum } from "./enums";
+import { fases } from "./fases.js";
+import { inscricoes } from "./inscricoes.js";
+import { confrontationStatusEnum } from "./enums.js";
 
 /** Disputa entre duas inscrições no chaveamento; pode conter vários jogos de truco. */
 export const confrontos = pgTable("confrontos", {

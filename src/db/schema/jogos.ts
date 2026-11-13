@@ -1,9 +1,9 @@
 import { sql } from "drizzle-orm";
 import { pgTable, uuid, integer, smallint, jsonb, timestamp, uniqueIndex, check, index } from "drizzle-orm/pg-core";
-import { confrontos } from "./confrontos";
-import { regrasTruco } from "./regrasTruco";
-import { gameStatusEnum } from "./enums";
-import type { TrucoRulesConfig } from "./types";
+import { confrontos } from "./confrontos.js";
+import { regrasTruco } from "./regrasTruco.js";
+import { gameStatusEnum } from "./enums.js";
+import type { TrucoRulesConfig } from "./types.js";
 
 /** Uma partida digital dentro de um confronto. O snapshot congela as regras usadas. */
 export const jogos = pgTable("jogos", {

@@ -1,8 +1,8 @@
 import { sql } from "drizzle-orm";
 import { pgTable, uuid, smallint, timestamp, uniqueIndex, index, check } from "drizzle-orm/pg-core";
-import { maos } from "./maos";
-import { jogadores } from "./jogadores";
-import { cartas } from "./cartas";
+import { maos } from "./maos.js";
+import { jogadores } from "./jogadores.js";
+import { cartas } from "./cartas.js";
 
 /** A tabela guarda a distribuição privada; não exponha consultas sem filtrar pelo jogador. */
 export const cartasDistribuidas = pgTable("cartas_distribuidas", {

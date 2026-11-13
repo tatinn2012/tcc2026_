@@ -1,7 +1,7 @@
 import { pgTable, uuid, timestamp, primaryKey, uniqueIndex, index } from "drizzle-orm/pg-core";
-import { duplas } from "./duplas";
-import { jogadores } from "./jogadores";
-import { teamMemberRoleEnum } from "./enums";
+import { duplas } from "./duplas.js";
+import { jogadores } from "./jogadores.js";
+import { teamMemberRoleEnum } from "./enums.js";
 
 /** Composição atual da dupla. A inscrição também salva uma escalação histórica. */
 export const duplaJogadores = pgTable("dupla_jogadores", {

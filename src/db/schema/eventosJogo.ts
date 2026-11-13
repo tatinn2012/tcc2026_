@@ -1,9 +1,9 @@
 import { sql } from "drizzle-orm";
 import { pgTable, uuid, integer, varchar, jsonb, timestamp, uniqueIndex, index, check } from "drizzle-orm/pg-core";
-import { jogos } from "./jogos";
-import { jogadores } from "./jogadores";
-import { eventVisibilityEnum } from "./enums";
-import type { JsonObject } from "./types";
+import { jogos } from "./jogos.js";
+import { jogadores } from "./jogadores.js";
+import { eventVisibilityEnum } from "./enums.js";
+import type { JsonObject } from "./types.js";
 
 /** Log imutável de eventos. Nunca envie privatePayload diretamente aos clientes. */
 export const eventosJogo = pgTable("eventos_jogo", {

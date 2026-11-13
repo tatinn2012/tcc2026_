@@ -1,6 +1,6 @@
 import { pgTable, uuid, varchar, text, timestamp, uniqueIndex, index } from "drizzle-orm/pg-core";
-import { usuarios } from "./usuarios";
-import { playerStatusEnum } from "./enums";
+import { usuarios } from "./usuarios.js";
+import { playerStatusEnum } from "./enums.js";
 
 export const jogadores = pgTable("jogadores", {
   id: uuid("id").defaultRandom().primaryKey(),

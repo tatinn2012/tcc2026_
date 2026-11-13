@@ -1,8 +1,8 @@
 import { sql } from "drizzle-orm";
 import { pgTable, uuid, smallint, boolean, timestamp, uniqueIndex, check, index } from "drizzle-orm/pg-core";
-import { vazas } from "./vazas";
-import { jogadores } from "./jogadores";
-import { cartasDistribuidas } from "./cartasDistribuidas";
+import { vazas } from "./vazas.js";
+import { jogadores } from "./jogadores.js";
+import { cartasDistribuidas } from "./cartasDistribuidas.js";
 
 export const jogadasCartas = pgTable("jogadas_cartas", {
   id: uuid("id").defaultRandom().primaryKey(),

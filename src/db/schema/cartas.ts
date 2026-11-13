@@ -1,5 +1,5 @@
 import { pgTable, smallint, varchar, uniqueIndex } from "drizzle-orm/pg-core";
-import { cardRankEnum, cardSuitEnum } from "./enums";
+import { cardRankEnum, cardSuitEnum } from "./enums.js";
 
 /** Catálogo estático das 40 cartas. Execute um seed inicial após a migration. */
 export const cartas = pgTable("cartas", {

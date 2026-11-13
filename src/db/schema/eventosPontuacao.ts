@@ -1,9 +1,9 @@
 import { sql } from "drizzle-orm";
 import { pgTable, uuid, integer, text, timestamp, check, index } from "drizzle-orm/pg-core";
-import { jogos } from "./jogos";
-import { maos } from "./maos";
-import { usuarios } from "./usuarios";
-import { teamSideEnum, scoreEventReasonEnum } from "./enums";
+import { jogos } from "./jogos.js";
+import { maos } from "./maos.js";
+import { usuarios } from "./usuarios.js";
+import { teamSideEnum, scoreEventReasonEnum } from "./enums.js";
 
 /** Fonte auditável da pontuação; jogos.pontosLadoA/B são apenas cache de leitura. */
 export const eventosPontuacao = pgTable("eventos_pontuacao", {

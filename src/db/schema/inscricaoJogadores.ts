@@ -1,7 +1,7 @@
 import { sql } from "drizzle-orm";
 import { pgTable, uuid, smallint, timestamp, primaryKey, uniqueIndex, check, index } from "drizzle-orm/pg-core";
-import { inscricoes } from "./inscricoes";
-import { jogadores } from "./jogadores";
+import { inscricoes } from "./inscricoes.js";
+import { jogadores } from "./jogadores.js";
 
 /** Snapshot dos dois jogadores que efetivamente representarão a dupla no torneio. */
 export const inscricaoJogadores = pgTable("inscricao_jogadores", {

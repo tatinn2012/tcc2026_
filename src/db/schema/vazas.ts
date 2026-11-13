@@ -1,8 +1,8 @@
 import { sql } from "drizzle-orm";
 import { pgTable, uuid, smallint, timestamp, uniqueIndex, check } from "drizzle-orm/pg-core";
-import { maos } from "./maos";
-import { jogadores } from "./jogadores";
-import { trickStatusEnum, trickWinnerSideEnum } from "./enums";
+import { maos } from "./maos.js";
+import { jogadores } from "./jogadores.js";
+import { trickStatusEnum, trickWinnerSideEnum } from "./enums.js";
 
 export const vazas = pgTable("vazas", {
   id: uuid("id").defaultRandom().primaryKey(),

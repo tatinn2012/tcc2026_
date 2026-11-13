@@ -1,8 +1,8 @@
 import { sql } from "drizzle-orm";
 import { pgTable, uuid, smallint, check, uniqueIndex, index } from "drizzle-orm/pg-core";
-import { confrontos } from "./confrontos";
-import { inscricoes } from "./inscricoes";
-import { slotOutcomeEnum } from "./enums";
+import { confrontos } from "./confrontos.js";
+import { inscricoes } from "./inscricoes.js";
+import { slotOutcomeEnum } from "./enums.js";
 
 /** slot 1 corresponde ao lado A; slot 2 corresponde ao lado B. */
 export const vagasConfronto = pgTable("vagas_confronto", {
